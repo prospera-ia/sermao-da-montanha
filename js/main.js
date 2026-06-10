@@ -8,6 +8,11 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasGsap = typeof window.gsap !== 'undefined';
   var isDesktop = window.matchMedia('(min-width: 761px)').matches;
+
+  // Modo estático (sem GSAP ou com "reduzir movimento"): o CSS .no-motion
+  // assume o layout — nada de sobreposição de textos.
+  var noMotion = reduce || !hasGsap;
+  if (noMotion) document.documentElement.classList.add('no-motion');
   if (hasGsap && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
   /* ---- 1. Lenis smooth scroll (sincronizado com GSAP) ---- */
@@ -66,9 +71,8 @@
         scrollTrigger: { trigger: el, start: 'top 85%' }
       });
     });
-  } else {
-    document.querySelectorAll('.rise, .hero__answer').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
   }
+  // (modo estático: o CSS .no-motion exibe .rise e oculta .hero__answer)
 
   /* ---- 4. HERO cinematográfico ---- */
   if (document.querySelector('.hero') && hasGsap && !reduce) {
@@ -87,10 +91,8 @@
       .to('.hero__cue', { autoAlpha: 0, duration: 0.15 }, 0)
       .to('.hero__lead', { yPercent: -18, autoAlpha: 0, ease: 'power1.in', duration: 0.5 }, 0)
       .fromTo('.hero__answer', { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 0.5 }, 0.45);
-  } else {
-    // Fallback (reduced-motion / sem GSAP): mostrar texto estático
-    document.querySelectorAll('.hero__lead > *').forEach(function (el) { el.style.opacity = 1; });
   }
+  // (modo estático: o CSS .no-motion exibe o conteúdo do hero)
 
   /* ---- 6. A TRILHA (fundo em altitudes + marcos + linha) ---- */
   var trailEl = document.querySelector('.trail');
@@ -124,18 +126,8 @@
     if (L2) ttl.to(L2, { opacity: 1, ease: 'none', duration: 1.6 }, n * 0.18);
     if (L3) ttl.to(L3, { opacity: 1, ease: 'none', duration: 1.6 }, n * 0.44);
     if (L4) ttl.to(L4, { opacity: 1, ease: 'none', duration: 1.6 }, n * 0.7);
-  } else if (trailEl) {
-    // MOBILE (ou reduced-motion): subida vertical — marcos empilhados, scroll nativo
-    document.querySelectorAll('.waypoint').forEach(function (w) { w.style.position = 'relative'; w.style.top = 'auto'; w.style.transform = 'none'; });
-    // revela cada marco ao subir (se houver GSAP)
-    if (hasGsap && !reduce) {
-      gsap.utils.toArray('.waypoint').forEach(function (w) {
-        gsap.from(w, { opacity: 0, y: 34, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: w, start: 'top 88%' } });
-      });
-    } else {
-      document.querySelectorAll('.waypoint').forEach(function (w) { w.style.opacity = 1; });
-    }
   }
+  // (modo estático: o CSS .no-motion empilha os 9 marcos em lista vertical)
 
   /* ---- 5. Altímetro: progresso da subida (0 → 2.700 m) ---- */
   var altFill = document.getElementById('altFill');
@@ -196,9 +188,8 @@
       .to('.beat__part--1', { autoAlpha: 0, y: -24, ease: 'power1.in', duration: 0.14 }, 0.40) // parte 1 sai (no centro)
       .to('.beat__part--2', { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 0.18 }, 0.46)  // parte 2 entra (no centro)
       .to('.beat__part--2', { autoAlpha: 1, duration: 0.36 }, 0.64);                            // parte 2 permanece até sair
-  } else if (beatEl) {
-    document.querySelectorAll('.beat__part').forEach(function (p) { p.style.opacity = 1; });
   }
+  // (modo estático: o CSS .no-motion mostra as duas partes em linhas separadas)
 
   /* ---- 8. FAQ: fecha as outras ao abrir uma ---- */
   var faqs = document.querySelectorAll('.accordion details');

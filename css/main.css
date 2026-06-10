@@ -362,9 +362,28 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   .offer { background: linear-gradient(rgba(236,229,216,.95), rgba(236,229,216,.97)), url('../images/web/cume.jpg') center/cover; }
 }
 
-/* ===== REDUCED MOTION ===== */
+/* ===== REDUCED MOTION (só desliga animações CSS; layout via .no-motion) ===== */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
-  .rise, .hero__answer, .beat__part { opacity: 1 !important; transform: none !important; }
   .cursor { display: none; }
 }
+
+/* ===== MODO ESTÁTICO (.no-motion) — sem GSAP ou com "reduzir movimento" =====
+   Tudo visível, nada sobreposto. */
+html.no-motion .rise { opacity: 1; transform: none; }
+html.no-motion .hero__lead > * { opacity: 1; }
+html.no-motion .hero__answer { display: none; }           /* redundante com o título — não sobrepõe */
+html.no-motion .hero__cue { display: none; }
+
+/* Beat: as duas partes em linhas separadas (não empilhadas no mesmo ponto) */
+html.no-motion .beat__quote { display: flex; flex-direction: column; gap: .15em; }
+html.no-motion .beat__part { opacity: 1; transform: none; }
+
+/* Trilha: lista vertical com os 9 marcos visíveis */
+html.no-motion .trail__stage { height: auto; padding: 4.5rem 0; }
+html.no-motion .trail__cue { display: none; }
+html.no-motion .trail__line { top: 4.5rem; bottom: 4.5rem; }
+html.no-motion .trail__fill { transform: scaleY(1); }
+html.no-motion .waypoints { position: relative; height: auto; }
+html.no-motion .waypoint { position: relative; top: auto; transform: none; opacity: 1; visibility: visible; margin-bottom: 3.2rem; }
+html.no-motion .waypoint:last-child { margin-bottom: 0; }
