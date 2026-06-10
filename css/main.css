@@ -165,11 +165,6 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 
 .trail__cue { position: absolute; bottom: 2rem; right: clamp(1.5rem,5vw,4rem); z-index: 3; font-family: 'Space Mono', monospace; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(251,248,243,.55); }
 
-@media (max-width: 760px) {
-  .trail__line { left: 1.4rem; }
-  .waypoints { margin-left: 3rem; width: calc(100% - 4rem); height: 60vh; }
-  .trail__cue { display: none; }
-}
 
 /* ===== SEÇÕES DE VENDA (Fase 4) ===== */
 .sec-head { max-width: 640px; margin: 0 auto clamp(2.5rem,5vw,4rem); text-align: center; }
@@ -343,20 +338,16 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 /* ===== MOBILE DEDICADO ===== */
 @media (max-width: 760px) {
   .mobile-cta { display: block; }
-  .hero__answer { display: none; }
+  .hero__answer { font-size: clamp(1.8rem, 8vw, 2.6rem); right: 1.2rem; }
   .hero__lead { max-width: 100%; }
 
-  /* A TRILHA → subida vertical (sem pin) */
-  .trail { background: var(--twilight); }
-  .trail__stage { height: auto; padding: 4.5rem 0; background: linear-gradient(rgba(15,22,22,.72), rgba(15,22,22,.86)), url('../images/web/alt-2.jpg') center/cover; }
-  .trail__bg, .trail__scrim, .trail__cue { display: none; }
-  .trail__inner { display: block; }
-  .trail__tag { position: static; margin: 0 0 2.2rem; }
-  .trail__line { top: 0; bottom: 0; left: 1.3rem; }
-  .trail__fill { transform: scaleY(1); }
-  .waypoints { position: static; height: auto; width: auto; margin-left: 2.6rem; }
-  .waypoint { position: static; transform: none; margin-bottom: 3.5rem; width: auto; }
-  .waypoint:last-child { margin-bottom: 0; }
+  /* A TRILHA no mobile: mesma experiência fixada, layout adaptado */
+  .trail__scrim { background: linear-gradient(180deg, rgba(12,17,17,.62), rgba(12,17,17,.5) 45%, rgba(12,17,17,.72)); }
+  .trail__line { left: 1.1rem; top: 12%; bottom: 12%; }
+  .trail__tag { left: 2.4rem; top: 6%; }
+  .trail__cue { display: none; }
+  .waypoints { margin-left: 2.4rem; width: calc(100% - 2.8rem); height: 62vh; }
+  .waypoint p { max-width: 100%; }
 
   /* full-bleed: legibilidade no retrato */
   .vista, .cause { min-height: auto; padding: 5rem 0; }

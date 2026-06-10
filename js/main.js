@@ -78,17 +78,15 @@
       stagger: 0.13, delay: 0.25, startAt: { y: 26 }
     });
 
-    // 4b. Scroll fixado (somente desktop): a vista se revela + a resposta surge
-    if (isDesktop) {
-      gsap.timeline({
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: '+=135%', scrub: 1, pin: true, anticipatePin: 1 }
-      })
-        .to('.hero__bg', { scale: 1.18, ease: 'none' }, 0)
-        .to('.hero__overlay', { opacity: 0.62, ease: 'none' }, 0)
-        .to('.hero__cue', { autoAlpha: 0, duration: 0.15 }, 0)
-        .to('.hero__lead', { yPercent: -18, autoAlpha: 0, ease: 'power1.in', duration: 0.5 }, 0)
-        .fromTo('.hero__answer', { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 0.5 }, 0.45);
-    }
+    // 4b. Scroll fixado (desktop e mobile): a vista se revela + a resposta surge
+    gsap.timeline({
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: '+=135%', scrub: 1, pin: true, anticipatePin: 1 }
+    })
+      .to('.hero__bg', { scale: 1.18, ease: 'none' }, 0)
+      .to('.hero__overlay', { opacity: 0.62, ease: 'none' }, 0)
+      .to('.hero__cue', { autoAlpha: 0, duration: 0.15 }, 0)
+      .to('.hero__lead', { yPercent: -18, autoAlpha: 0, ease: 'power1.in', duration: 0.5 }, 0)
+      .fromTo('.hero__answer', { autoAlpha: 0, y: 44 }, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 0.5 }, 0.45);
   } else {
     // Fallback (reduced-motion / sem GSAP): mostrar texto estático
     document.querySelectorAll('.hero__lead > *').forEach(function (el) { el.style.opacity = 1; });
@@ -96,7 +94,7 @@
 
   /* ---- 6. A TRILHA (fundo em altitudes + marcos + linha) ---- */
   var trailEl = document.querySelector('.trail');
-  if (trailEl && hasGsap && !reduce && isDesktop) {
+  if (trailEl && hasGsap && !reduce) {
     var wps = gsap.utils.toArray('.waypoint');
     var n = wps.length;
     gsap.set(wps, { autoAlpha: 0, y: 40 });
