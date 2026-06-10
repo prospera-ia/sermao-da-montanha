@@ -205,7 +205,6 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
 .t-card p { font-style: italic; color: var(--ink); margin-bottom: 1.4rem; }
 .t-card footer { margin-top: auto; font-weight: 600; color: var(--forest); }
 .t-card footer span { font-weight: 400; color: var(--ink-soft); }
-@media (prefers-reduced-motion: reduce) { .t-track { overflow-x: auto; } .t-row { animation: none; } }
 
 /* BEAT cinematográfico (parallax + revelação sequencial, imagem limpa) */
 .beat { position: relative; min-height: 58svh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--cream); overflow: hidden; }
@@ -362,14 +361,8 @@ h1 em, h2 em { color: var(--gold); font-weight: 400; }
   .offer { background: linear-gradient(rgba(236,229,216,.95), rgba(236,229,216,.97)), url('../images/web/cume.jpg') center/cover; }
 }
 
-/* ===== REDUCED MOTION (só desliga animações CSS; layout via .no-motion) ===== */
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-  .cursor { display: none; }
-}
-
-/* ===== MODO ESTÁTICO (.no-motion) — sem GSAP ou com "reduzir movimento" =====
-   Tudo visível, nada sobreposto. */
+/* ===== MODO ESTÁTICO (.no-motion) — só se o GSAP falhar ao carregar =====
+   Tudo visível, nada sobreposto. (Animações rodam mesmo com "Reduzir Movimento".) */
 html.no-motion .rise { opacity: 1; transform: none; }
 html.no-motion .hero__lead > * { opacity: 1; }
 html.no-motion .hero__answer { display: none; }           /* redundante com o título — não sobrepõe */

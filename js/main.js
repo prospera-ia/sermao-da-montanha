@@ -5,7 +5,8 @@
 (function () {
   'use strict';
 
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Animações sempre ativas, mesmo com "Reduzir Movimento" do sistema (decisão do cliente)
+  var reduce = false;
   var hasGsap = typeof window.gsap !== 'undefined';
   var isDesktop = window.matchMedia('(min-width: 761px)').matches;
 
