@@ -3,1584 +3,291 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Sermão da Montanha: O Despertar do Espírito — documentário em 9 capítulos com sete palestrantes. Acesso vitalício. Receita destinada às obras beneficentes do Núcleo Gaspar." />
-<title>Sermão da Montanha: O Despertar do Espírito</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  /* ===== DESIGN TOKENS ===== */
-  :root {
-    --azul-noite: #0E1924;
-    --azul-profundo: #111E2B;
-    --azul-meialuz: #1A2B3C;
-    --ouro-vivo: #C9A227;
-    --ouro-suave: #D4AF55;
-    --ouro-palido: #E8D48A;
-    --creme-luminoso: #F0EBD8;
-    --creme-medio: #C8BFA8;
-    --creme-apagado: #8A8070;
-    --preto-veludo: #07101A;
+<title>A Subida — Sermão da Montanha: O Despertar do Espírito</title>
+<meta name="description" content="Uma ascensão em 9 marcos pelo ensinamento mais profundo já dado para a transformação do espírito. Acima da névoa, há uma vista que poucos alcançam." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="A Subida — O Despertar do Espírito" />
+<meta property="og:description" content="Há dois mil anos, um Sermão traçou a subida mais profunda que existe. Uma jornada espiritual em 9 marcos." />
+<meta property="og:image" content="images/web/cume.jpg" />
+<meta name="theme-color" content="#131b1b" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23131b1b'/%3E%3Cpath d='M16 6l10 20H6z' fill='%23BE9A4E'/%3E%3Cpath d='M16 6l4 8-4 3-4-3z' fill='%23F7F3EC'/%3E%3C/svg%3E" />
 
-    --shadow-sm: 0 4px 16px rgba(0,0,0,.4);
-    --shadow-md: 0 8px 32px rgba(0,0,0,.5);
-    --shadow-lg: 0 16px 64px rgba(0,0,0,.6);
-    --glow-gold: 0 0 32px rgba(201,162,39,.35);
-    --glow-gold-strong: 0 0 64px rgba(201,162,39,.5);
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-    --space-xs: 8px;
-    --space-sm: 12px;
-    --space-md: 16px;
-    --space-lg: 24px;
-    --space-xl: 32px;
-    --space-2xl: 48px;
-    --space-3xl: 64px;
-    --space-4xl: 96px;
-
-    --maxw: 1200px;
-    --maxw-narrow: 760px;
-  }
-
-  /* ===== RESET ===== */
-  *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--azul-noite);
-    color: var(--creme-medio);
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    position: relative;
-  }
-  /* Grain overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.05;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.9'/></svg>");
-  }
-  img { max-width: 100%; display: block; height: auto; }
-  a { color: var(--ouro-suave); text-decoration: none; transition: color .2s ease; }
-  a:hover, a:focus-visible { color: var(--ouro-palido); }
-  :focus-visible {
-    outline: 2px solid var(--ouro-vivo);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  /* ===== TYPOGRAPHY ===== */
-  h1, h2, h3, h4 { margin: 0; color: var(--creme-luminoso); font-weight: 400; }
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: clamp(40px, 7vw, 84px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-  }
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(28px, 4.5vw, 48px);
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--ouro-suave);
-  }
-  h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: clamp(22px, 2.5vw, 28px);
-    color: var(--creme-luminoso);
-    line-height: 1.3;
-  }
-  p { margin: 0 0 var(--space-md); }
-  em, i { color: var(--ouro-palido); font-style: italic; }
-  strong { color: var(--creme-luminoso); font-weight: 600; }
-  .eyebrow {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    color: var(--ouro-vivo);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: var(--space-md);
-  }
-  .footnote { font-size: 13px; color: var(--creme-apagado); }
-
-  /* ===== LAYOUT ===== */
-  .container {
-    width: 100%;
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 0 var(--space-lg);
-    position: relative;
-    z-index: 2;
-  }
-  .narrow { max-width: var(--maxw-narrow); margin: 0 auto; }
-  section { padding: var(--space-3xl) 0; position: relative; }
-  @media (min-width: 768px) { section { padding: var(--space-4xl) 0; } }
-
-  /* Section dividers */
-  .divider {
-    height: 1px;
-    width: 80px;
-    background: linear-gradient(90deg, transparent, var(--ouro-vivo), transparent);
-    margin: var(--space-xl) auto;
-    border: none;
-  }
-
-  /* ===== BUTTONS ===== */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 18px 36px;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    border: 1px solid var(--ouro-vivo);
-    text-align: center;
-    line-height: 1.2;
-  }
-  .btn-primary {
-    background: linear-gradient(135deg, #C9A227 0%, #E8D48A 50%, #C9A227 100%);
-    color: var(--preto-veludo);
-    box-shadow: var(--glow-gold);
-  }
-  .btn-primary:hover, .btn-primary:focus-visible {
-    box-shadow: var(--glow-gold-strong);
-    transform: translateY(-1px);
-    color: var(--preto-veludo);
-  }
-  .btn-secondary {
-    background: transparent;
-    color: var(--ouro-vivo);
-  }
-  .btn-secondary:hover, .btn-secondary:focus-visible {
-    background: rgba(201,162,39,.08);
-    color: var(--ouro-suave);
-  }
-  @media (max-width: 480px) {
-    .btn { padding: 16px 24px; font-size: 13px; width: 100%; }
-  }
-
-  /* ===== HEADER / NAV ===== */
-  header[role="banner"] {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(7, 16, 26, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201,162,39,.12);
-  }
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px var(--space-lg);
-    max-width: var(--maxw);
-    margin: 0 auto;
-  }
-  .brand {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 17px;
-    color: var(--creme-luminoso);
-  }
-  .brand em {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-style: italic;
-    color: var(--ouro-suave);
-    font-size: 14px;
-    display: block;
-    margin-top: 2px;
-  }
-  .nav-cta {
-    padding: 10px 20px;
-    font-size: 12px;
-    min-height: 44px;
-  }
-  @media (max-width: 600px) { .brand em { display: none; } }
-
-  /* ===== HERO ===== */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 120px 0 var(--space-3xl);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    background: var(--preto-veludo);
-  }
-  .hero-video {
-    position: absolute;
-    inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.35;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(180deg, rgba(7,16,26,.55) 0%, rgba(7,16,26,.3) 40%, rgba(7,16,26,.7) 100%),
-      radial-gradient(circle at 20% 80%, rgba(201,162,39,.06), transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(201,162,39,.04), transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-  }
-  .hero-mountain {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 30%;
-    background: linear-gradient(180deg, transparent, var(--azul-noite));
-    pointer-events: none;
-    z-index: 2;
-  }
-  .hero-content { position: relative; z-index: 3; text-shadow: 0 2px 20px rgba(0,0,0,.5); }
-  .hero h1 {
-    margin-bottom: var(--space-lg);
-    max-width: 920px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-sub {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 2vw, 22px);
-    color: var(--creme-medio);
-    line-height: 1.6;
-    max-width: 680px;
-    margin: 0 auto var(--space-xl);
-    font-weight: 500;
-  }
-  .hero-sub strong {
-    color: var(--ouro-palido);
-    font-style: italic;
-    font-weight: 600;
-  }
-  .hero-cta-wrap { margin-top: var(--space-xl); }
-  .hero-meta {
-    margin-top: var(--space-md);
-    font-size: 13px;
-    color: var(--creme-apagado);
-    letter-spacing: 0.05em;
-  }
-  /* Decorative ornament */
-  .ornament {
-    display: inline-block;
-    color: var(--ouro-vivo);
-    opacity: 0.5;
-    font-size: 20px;
-    margin: var(--space-md) 0;
-    letter-spacing: 0.6em;
-  }
-
-  /* ===== SOCIAL PROOF LINE ===== */
-  .social-proof-line {
-    padding: var(--space-2xl) 0;
-    text-align: center;
-    border-top: 1px solid rgba(201,162,39,.12);
-    border-bottom: 1px solid rgba(201,162,39,.12);
-    background: var(--azul-profundo);
-  }
-  .social-proof-line p {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 1.6vw, 19px);
-    color: var(--creme-medio);
-    font-weight: 500;
-  }
-  .social-proof-line strong { color: var(--ouro-palido); }
-
-  /* ===== PROBLEMA / CHECKLIST ===== */
-  .check-list { list-style: none; padding: 0; margin: var(--space-2xl) 0 0; }
-  .check-list li {
-    display: flex;
-    gap: var(--space-md);
-    padding: var(--space-lg) 0;
-    border-bottom: 1px solid rgba(201,162,39,.08);
-    align-items: flex-start;
-    line-height: 1.6;
-    font-size: clamp(15px, 1.5vw, 17px);
-  }
-  .check-list li:last-child { border-bottom: none; }
-  .check-circle {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    border: 1.5px solid var(--ouro-vivo);
-    border-radius: 50%;
-    margin-top: 4px;
-    background: rgba(201,162,39,.06);
-  }
-
-  /* ===== AGITAÇÃO / BRIDGE ===== */
-  .bridge { text-align: center; }
-  .bridge p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(18px, 2vw, 22px);
-    line-height: 1.7;
-    color: var(--creme-medio);
-    margin-bottom: var(--space-lg);
-  }
-  .bridge p strong {
-    color: var(--ouro-palido);
-    font-style: italic;
-    font-weight: 600;
-  }
-  .bridge .lead {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: clamp(22px, 3vw, 30px);
-    color: var(--ouro-suave);
-    margin: var(--space-lg) 0;
-  }
-
-  /* ===== APRESENTAÇÃO ===== */
-  .section-head { text-align: center; margin-bottom: var(--space-2xl); }
-  .section-head .narrow { margin-top: var(--space-md); }
-  .section-head p {
-    font-size: clamp(15px, 1.6vw, 18px);
-    color: var(--creme-medio);
-  }
-  .feature-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-    margin-top: var(--space-2xl);
-  }
-  @media (min-width: 768px) {
-    .feature-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
-  }
-  .feature {
-    background: var(--azul-profundo);
-    border: 1px solid rgba(201,162,39,.2);
-    border-top: 2px solid var(--ouro-vivo);
-    border-radius: 4px;
-    padding: var(--space-xl) var(--space-lg);
-    transition: all 0.3s ease;
-  }
-  .feature:hover {
-    border-color: rgba(201,162,39,.5);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
-  }
-  .feature-icon {
-    width: 48px; height: 48px;
-    margin-bottom: var(--space-md);
-    color: var(--ouro-vivo);
-    stroke: var(--ouro-vivo);
-    fill: none;
-  }
-  .feature h3 { margin-bottom: var(--space-sm); }
-  .feature p { font-size: 15px; margin: 0; color: var(--creme-medio); }
-
-  /* ===== EPISÓDIOS / ACCORDION ===== */
-  .episodes {
-    background: var(--azul-profundo);
-  }
-  .episode-list { margin-top: var(--space-2xl); }
-  .episode {
-    background: var(--azul-meialuz);
-    border: 1px solid rgba(201,162,39,.2);
-    border-top: 2px solid var(--ouro-vivo);
-    border-radius: 4px;
-    margin-bottom: var(--space-md);
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  .episode:hover {
-    border-color: rgba(201,162,39,.5);
-    box-shadow: var(--shadow-sm);
-  }
-  .episode summary {
-    cursor: pointer;
-    padding: var(--space-lg);
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    list-style: none;
-    min-height: 64px;
-    transition: background .2s ease;
-  }
-  .episode summary::-webkit-details-marker { display: none; }
-  .episode summary:hover { background: rgba(201,162,39,.04); }
-  .episode-num {
-    flex-shrink: 0;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 28px;
-    color: var(--ouro-vivo);
-    width: 56px;
-    text-align: center;
-    line-height: 1;
-  }
-  .episode-title {
-    flex: 1;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: clamp(18px, 2vw, 22px);
-    color: var(--creme-luminoso);
-  }
-  .episode-toggle {
-    flex-shrink: 0;
-    width: 24px; height: 24px;
-    color: var(--ouro-vivo);
-    transition: transform .3s ease;
-  }
-  .episode[open] .episode-toggle { transform: rotate(45deg); }
-  .episode-body {
-    padding: 0 var(--space-lg) var(--space-lg) calc(var(--space-lg) + 56px + var(--space-md));
-    color: var(--creme-medio);
-    font-size: 15px;
-    line-height: 1.7;
-  }
-  .episode-body em { color: var(--ouro-palido); }
-  @media (max-width: 600px) {
-    .episode summary { padding: var(--space-md); gap: var(--space-sm); }
-    .episode-num { width: 40px; font-size: 22px; }
-    .episode-body { padding: 0 var(--space-md) var(--space-md); }
-  }
-
-  /* ===== AUTORIDADE / PALESTRANTES ===== */
-  .speaker-main {
-    background: var(--azul-profundo);
-    border: 1px solid rgba(201,162,39,.2);
-    border-left: 3px solid var(--ouro-vivo);
-    border-radius: 4px;
-    padding: var(--space-2xl);
-    margin-top: var(--space-2xl);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-    align-items: center;
-  }
-  @media (min-width: 768px) {
-    .speaker-main { grid-template-columns: 200px 1fr; }
-  }
-  .speaker-portrait {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(--ouro-vivo);
-    box-shadow: var(--glow-gold);
-    flex-shrink: 0;
-  }
-  .speaker-main h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: clamp(24px, 3vw, 32px);
-    margin-bottom: var(--space-sm);
-  }
-  .speaker-main p { color: var(--creme-medio); margin: 0; }
-  .speaker-main em { color: var(--ouro-palido); }
-
-  .speakers-grid {
-    margin-top: var(--space-2xl);
-    text-align: center;
-  }
-  .speakers-names {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-sm) var(--space-lg);
-    margin-bottom: var(--space-lg);
-  }
-  .speakers-names span {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: clamp(18px, 2vw, 22px);
-    color: var(--creme-luminoso);
-    padding: var(--space-sm) var(--space-md);
-    background: rgba(26,43,60,.6);
-    border: 1px solid rgba(201,162,39,.2);
-    border-radius: 2px;
-  }
-  .speakers-grid p {
-    max-width: 640px;
-    margin: var(--space-lg) auto 0;
-    color: var(--creme-medio);
-  }
-
-  /* ===== TRANSFORMAÇÕES ===== */
-  .benefits-list {
-    list-style: none;
-    padding: 0;
-    margin: var(--space-2xl) 0 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-  @media (min-width: 768px) {
-    .benefits-list { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
-  }
-  .benefits-list li {
-    display: flex;
-    gap: var(--space-md);
-    padding: var(--space-lg);
-    background: rgba(26,43,60,.4);
-    border: 1px solid rgba(201,162,39,.15);
-    border-radius: 4px;
-    line-height: 1.6;
-    font-size: 15px;
-    color: var(--creme-medio);
-  }
-  .benefits-list li::before {
-    content: '✦';
-    color: var(--ouro-vivo);
-    font-size: 20px;
-    flex-shrink: 0;
-    line-height: 1.2;
-  }
-  .benefits-list em { color: var(--ouro-palido); }
-
-  /* ===== DEPOIMENTOS / CAROUSEL ===== */
-  .testimonials { background: var(--azul-profundo); }
-  .carousel {
-    position: relative;
-    margin-top: var(--space-2xl);
-  }
-  .carousel-track {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: var(--space-lg);
-    padding: var(--space-md) 4px var(--space-lg);
-    scrollbar-width: thin;
-    scrollbar-color: var(--ouro-vivo) transparent;
-  }
-  .carousel-track::-webkit-scrollbar { height: 6px; }
-  .carousel-track::-webkit-scrollbar-thumb { background: var(--ouro-vivo); border-radius: 3px; }
-  .carousel-track::-webkit-scrollbar-track { background: rgba(201,162,39,.08); }
-  .testimonial {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    background: rgba(26,43,60,.6);
-    border: 1px solid rgba(201,162,39,.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 4px;
-    padding: var(--space-xl);
-    position: relative;
-  }
-  @media (min-width: 768px) {
-    .testimonial { flex: 0 0 calc((100% - var(--space-lg) * 2) / 3); }
-  }
-  @media (min-width: 480px) and (max-width: 767px) {
-    .testimonial { flex: 0 0 80%; }
-  }
-  .testimonial::before {
-    content: '“';
-    position: absolute;
-    top: -10px; left: 16px;
-    font-family: 'Playfair Display', serif;
-    font-size: 80px;
-    color: var(--ouro-vivo);
-    opacity: 0.3;
-    line-height: 1;
-  }
-  .testimonial-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 17px;
-    line-height: 1.65;
-    color: var(--creme-medio);
-    margin-bottom: var(--space-lg);
-    margin-top: var(--space-md);
-  }
-  .testimonial-name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--creme-luminoso);
-    letter-spacing: 0.05em;
-  }
-  .testimonial-city {
-    font-size: 12px;
-    color: var(--creme-apagado);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
-  .carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-    margin-top: var(--space-lg);
-  }
-  .carousel-btn {
-    width: 44px; height: 44px;
-    background: transparent;
-    border: 1px solid var(--ouro-vivo);
-    border-radius: 50%;
-    color: var(--ouro-vivo);
-    cursor: pointer;
-    transition: all .2s ease;
-    display: grid; place-items: center;
-  }
-  .carousel-btn:hover, .carousel-btn:focus-visible {
-    background: rgba(201,162,39,.12);
-    color: var(--ouro-palido);
-  }
-
-  /* ===== A CAUSA ===== */
-  .cause {
-    background:
-      linear-gradient(135deg, rgba(201,162,39,.06), rgba(7,16,26,.4)),
-      var(--azul-meialuz);
-    border-top: 1px solid rgba(201,162,39,.2);
-    border-bottom: 1px solid rgba(201,162,39,.2);
-    text-align: center;
-  }
-  .cause-icon {
-    width: 80px; height: 80px;
-    margin: 0 auto var(--space-lg);
-    color: var(--ouro-vivo);
-    stroke: var(--ouro-vivo);
-    fill: none;
-  }
-  .cause-body p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 1.8vw, 20px);
-    line-height: 1.7;
-  }
-  .cause-body strong { color: var(--ouro-palido); }
-
-  /* ===== OFERTA ===== */
-  .offer { text-align: center; }
-  .offer-card {
-    background: var(--azul-profundo);
-    border: 1px solid var(--ouro-vivo);
-    border-radius: 4px;
-    padding: var(--space-2xl) var(--space-lg);
-    max-width: 560px;
-    margin: var(--space-2xl) auto 0;
-    box-shadow: var(--glow-gold);
-    position: relative;
-  }
-  @media (min-width: 768px) { .offer-card { padding: var(--space-2xl) var(--space-2xl); } }
-  .offer-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(22px, 2.5vw, 28px);
-    font-weight: 700;
-    margin-bottom: var(--space-md);
-  }
-  .offer-feat {
-    list-style: none;
-    padding: 0;
-    margin: var(--space-lg) 0;
-    text-align: left;
-  }
-  .offer-feat li {
-    padding: var(--space-sm) 0;
-    border-bottom: 1px solid rgba(201,162,39,.1);
-    display: flex; gap: var(--space-sm);
-    font-size: 15px;
-    color: var(--creme-medio);
-  }
-  .offer-feat li:last-child { border-bottom: none; }
-  .offer-feat li::before { content: '✦'; color: var(--ouro-vivo); flex-shrink: 0; }
-  .price-old {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    color: var(--creme-apagado);
-    text-decoration: line-through;
-    display: block;
-    margin: var(--space-lg) 0 var(--space-xs);
-  }
-  .price-now {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 7vw, 72px);
-    font-weight: 700;
-    color: var(--ouro-suave);
-    line-height: 1;
-    letter-spacing: -0.02em;
-  }
-  .price-meta {
-    color: var(--creme-medio);
-    font-size: 14px;
-    margin: var(--space-sm) 0 var(--space-xl);
-    letter-spacing: 0.05em;
-  }
-  .offer-card .btn { width: 100%; }
-  .offer-secure {
-    margin-top: var(--space-md);
-    font-size: 12px;
-    color: var(--creme-apagado);
-    font-style: italic;
-  }
-
-  /* ===== GARANTIA ===== */
-  .guarantee { text-align: center; }
-  .guarantee .narrow p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 1.8vw, 20px);
-    line-height: 1.7;
-  }
-  .seals {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-lg);
-    margin-top: var(--space-2xl);
-  }
-  .seal {
-    background: rgba(201,162,39,.08);
-    border: 1px solid rgba(201,162,39,.3);
-    padding: var(--space-md) var(--space-lg);
-    border-radius: 2px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--ouro-suave);
-    letter-spacing: 0.08em;
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-  }
-  .seal-icon { font-size: 18px; }
-
-  /* ===== INDECISÃO ===== */
-  .indecision {
-    background: var(--azul-profundo);
-    text-align: center;
-  }
-  .indecision .narrow p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 1.8vw, 20px);
-    line-height: 1.8;
-    color: var(--creme-medio);
-  }
-
-  /* ===== FAQ ===== */
-  .faq-list { margin-top: var(--space-2xl); }
-  .faq-item {
-    border-bottom: 1px solid rgba(201,162,39,.15);
-    padding: var(--space-md) 0;
-  }
-  .faq-item summary {
-    cursor: pointer;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: clamp(17px, 2vw, 20px);
-    color: var(--creme-luminoso);
-    padding: var(--space-md) 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-md);
-    list-style: none;
-    min-height: 44px;
-  }
-  .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary:hover { color: var(--ouro-suave); }
-  .faq-toggle {
-    flex-shrink: 0;
-    width: 22px; height: 22px;
-    color: var(--ouro-vivo);
-    transition: transform .3s ease;
-  }
-  .faq-item[open] .faq-toggle { transform: rotate(45deg); }
-  .faq-answer {
-    padding: 0 0 var(--space-md);
-    color: var(--creme-medio);
-    line-height: 1.7;
-  }
-
-  /* ===== SUPORTE ===== */
-  .support { text-align: center; background: var(--azul-meialuz); }
-  .support p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 1.8vw, 20px);
-    color: var(--creme-medio);
-    max-width: 580px;
-    margin: 0 auto var(--space-xl);
-  }
-  .support-meta {
-    margin-top: var(--space-md);
-    color: var(--creme-apagado);
-    font-size: 13px;
-    font-style: italic;
-  }
-
-  /* ===== CTA FINAL ===== */
-  .final-cta {
-    text-align: center;
-    background:
-      radial-gradient(ellipse at center, rgba(201,162,39,.08), transparent 60%),
-      var(--azul-noite);
-    padding: var(--space-4xl) 0;
-  }
-  .final-cta h2 { color: var(--creme-luminoso); font-style: normal; font-weight: 700; }
-  .final-cta .narrow p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 2vw, 22px);
-    line-height: 1.7;
-  }
-  .final-cta .narrow em { color: var(--ouro-palido); font-style: italic; }
-  .final-cta-meta {
-    margin-top: var(--space-md);
-    font-size: 13px;
-    color: var(--creme-apagado);
-    font-style: italic;
-    letter-spacing: 0.05em;
-  }
-
-  /* ===== LIVRO ===== */
-  .book-section {
-    background: var(--azul-meialuz);
-    border-top: 1px solid rgba(201,162,39,.2);
-    border-bottom: 1px solid rgba(201,162,39,.2);
-  }
-  .book-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
-    align-items: center;
-    margin-top: var(--space-2xl);
-  }
-  @media (min-width: 768px) {
-    .book-grid { grid-template-columns: 340px 1fr; gap: var(--space-3xl); }
-  }
-  .book-img-wrap {
-    display: flex;
-    justify-content: center;
-  }
-  .book-img-wrap img {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: var(--shadow-lg), var(--glow-gold);
-    transition: transform .4s ease, box-shadow .4s ease;
-  }
-  .book-img-wrap img:hover {
-    transform: translateY(-6px) rotate(1deg);
-    box-shadow: var(--shadow-lg), var(--glow-gold-strong);
-  }
-  .book-body p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 1.8vw, 20px);
-    line-height: 1.7;
-    color: var(--creme-medio);
-    margin-bottom: var(--space-lg);
-  }
-  .book-body strong { color: var(--ouro-palido); }
-  .book-feat {
-    list-style: none;
-    padding: 0;
-    margin: var(--space-lg) 0 var(--space-xl);
-  }
-  .book-feat li {
-    display: flex;
-    gap: var(--space-sm);
-    padding: var(--space-sm) 0;
-    font-size: 15px;
-    color: var(--creme-medio);
-    border-bottom: 1px solid rgba(201,162,39,.08);
-  }
-  .book-feat li:last-child { border-bottom: none; }
-  .book-feat li::before { content: '✦'; color: var(--ouro-vivo); flex-shrink: 0; }
-  .book-price-note {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: var(--creme-apagado);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-top: var(--space-sm);
-    font-style: normal;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--preto-veludo);
-    padding: var(--space-2xl) 0 var(--space-xl);
-    text-align: center;
-    border-top: 1px solid rgba(201,162,39,.15);
-  }
-  footer .brand-foot {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: var(--creme-luminoso);
-    font-size: 18px;
-    margin-bottom: var(--space-sm);
-  }
-  footer p { font-size: 14px; color: var(--creme-medio); margin-bottom: var(--space-lg); }
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-md) var(--space-lg);
-    margin-bottom: var(--space-lg);
-  }
-  .footer-links a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--creme-medio);
-  }
-  .footer-links a:hover { color: var(--ouro-suave); }
-  .copyright { font-size: 12px; color: var(--creme-apagado); }
-
-  /* ===== ANIMATIONS ===== */
-  @media (prefers-reduced-motion: no-preference) {
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .8s ease, transform .8s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 480px) {
-    section { padding: var(--space-2xl) 0; }
-    .hero { padding: 100px 0 var(--space-2xl); min-height: auto; }
-    .speaker-main { padding: var(--space-xl) var(--space-lg); }
-    .offer-card { padding: var(--space-xl) var(--space-lg); }
-  }
-  @media print {
-    body::before, header[role="banner"] { display: none; }
-  }
-</style>
+<link rel="stylesheet" href="css/main.css?v=11" />
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
-<header role="banner">
-  <nav class="nav" aria-label="Navegação principal">
-    <a href="#hero" class="brand" aria-label="Sermão da Montanha — página inicial">
-      Sermão da Montanha
-      <em>O Despertar do Espírito</em>
-    </a>
-    <a href="#oferta" class="btn btn-primary nav-cta">Acessar</a>
-  </nav>
-</header>
+<!-- Cursor customizado -->
+<div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
 
-<main id="conteudo">
+<!-- CTA fixo (mobile) -->
+<a href="#oferta" class="mobile-cta">Ver as opções · a partir de R$ 39,90</a>
 
-<!-- ============ 1. HERO ============ -->
-<section class="hero" id="hero" aria-labelledby="hero-title">
-  <video class="hero-video" autoplay loop muted playsinline aria-hidden="true" poster="">
-    <source src="assets/hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-mountain" aria-hidden="true"></div>
-  <div class="container hero-content">
-    <span class="eyebrow">Documentário · 9 capítulos</span>
-    <h1 id="hero-title">Há uma palavra hebraica que Jesus usou no Sermão da Montanha — e que muda completamente o sentido de tudo que você já aprendeu sobre felicidade.</h1>
-    <div class="ornament" aria-hidden="true">✦ ✦ ✦</div>
-    <p class="hero-sub">
-      Sete palestrantes. Nove encontros. Uma leitura do texto mais famoso da história que vai do contexto histórico do Mar da Galileia até o coração de quem assiste.
-    </p>
-    <p class="hero-sub">
-      Isso é <strong>Sermão da Montanha: O Despertar do Espírito</strong> — um documentário para quem quer ir além da superfície.
-    </p>
-    <div class="hero-cta-wrap">
-      <a href="#oferta" class="btn btn-primary">Quero acessar o documentário</a>
-      <p class="hero-meta">Acesso vitalício · R$ 129</p>
-    </div>
-  </div>
-</section>
+<!-- Ícone persistente (canto inferior direito) -->
+<a href="#hero" class="brand-mark" aria-label="Sermão da Montanha — voltar ao topo"><img src="images/web/icon.png" alt="" /></a>
 
-<!-- ============ 2. PROVA SOCIAL LINHA ============ -->
-<aside class="social-proof-line" aria-label="Prova social">
-  <div class="container">
-    <p><strong>Mais de 2.000 pessoas já acessaram este documentário nos últimos 3 anos.</strong></p>
-  </div>
+<!-- Indicador de altitude (progresso da subida) -->
+<aside class="altimeter" aria-hidden="true">
+  <span class="altimeter__label">ALTITUDE</span>
+  <span class="altimeter__value" id="altValue">0 m</span>
+  <div class="altimeter__track"><div class="altimeter__fill" id="altFill"></div></div>
 </aside>
 
-<!-- ============ 3. PROBLEMA ============ -->
-<section class="problem" aria-labelledby="problem-title">
-  <div class="container narrow">
-    <div class="section-head">
-      <span class="eyebrow">Identificação</span>
-      <h2 id="problem-title">Você já teve algum desses momentos?</h2>
+<!-- ░░░ HERO ░░░ -->
+<section class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <div class="hero__lead">
+      <img class="hero__mark" src="images/web/icon.png" alt="Emblema do documentário Sermão da Montanha" />
+      <p class="hero__eyebrow">Sermão da Montanha · O Despertar do Espírito</p>
+      <h1 class="hero__impact">Há dois mil anos, um Sermão traçou a subida mais profunda que existe.</h1>
+      <p class="hero__support">Prepare-se para uma jornada espiritual rumo ao desenvolvimento de suas virtudes — um passo, uma transformação de cada vez.</p>
+      <a href="#trilha" class="btn hero__cta" data-cursor="grow">Começar a jornada <span>↓</span></a>
     </div>
-    <ul class="check-list">
-      <li><span class="check-circle" aria-hidden="true"></span><span>Leu o Sermão da Montanha várias vezes, mas sentiu que faltava algo — como se o texto escondesse mais do que entregava</span></li>
-      <li><span class="check-circle" aria-hidden="true"></span><span>Ouviu falar das Bem-aventuranças desde criança, mas nunca teve uma explicação que realmente fizesse sentido</span></li>
-      <li><span class="check-circle" aria-hidden="true"></span><span>Sente que a espiritualidade que você vive é mais profunda do que o que é ensinado na maioria dos lugares</span></li>
-      <li><span class="check-circle" aria-hidden="true"></span><span>Tem fome de entender as origens, o contexto histórico, o idioma original — não só a moral da história</span></li>
-      <li><span class="check-circle" aria-hidden="true"></span><span>Acredita que o ensinamento de Jesus vai muito além de uma religião — e que é hora de entender o que ele realmente disse</span></li>
+    <h2 class="hero__answer">A jornada começa aqui.</h2>
+  </div>
+  <div class="hero__cue" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ░░░ O CHAMADO + O ROTEIRO (unificados) ░░░ -->
+<section class="section call" id="chamado">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow rise">O roteiro · 9 marcos · uma ascensão</p>
+    <h2 class="rise">Existe uma altura em você que ainda não foi alcançada.</h2>
+    <p class="lead rise">Não é falta de fé. É que a trilha foi sendo coberta — por traduções, repetições, dogmas — até parecer que o topo não existia mais. Mas ele existe, e o caminho nunca deixou de estar lá.</p>
+    <p class="lead rise">Cada capítulo é uma parada na montanha — uma virtude que se conquista antes de seguir para a próxima. Esta é a trilha completa, feita um passo de cada vez.</p>
+  </div>
+</section>
+
+<!-- ░░░ A TRILHA (experiência fixada) ░░░ -->
+<section class="trail" id="trilha">
+  <div class="trail__stage">
+    <div class="trail__bg">
+      <div class="trail__layer trail__layer--base" style="background-image:url('images/web/alt-1.jpg')"></div>
+      <div class="trail__layer" data-l="2" style="background-image:url('images/web/alt-2.jpg')"></div>
+      <div class="trail__layer" data-l="3" style="background-image:url('images/web/alt-3.jpg')"></div>
+      <div class="trail__layer" data-l="4" style="background-image:url('images/web/cume.jpg')"></div>
+    </div>
+    <div class="trail__scrim"></div>
+
+    <div class="trail__line"><div class="trail__fill"></div></div>
+
+    <div class="trail__inner">
+      <p class="trail__tag">A Trilha</p>
+      <div class="waypoints">
+        <article class="waypoint"><span class="waypoint__alt">Marco 01 · 200 m</span><span class="waypoint__num">01</span><h3>As Raízes</h3><p>Onde tudo começa: quem foi Jesus como mestre, e por que esse ensinamento atravessou dois mil anos intacto.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 02 · 450 m</span><span class="waypoint__num">02</span><h3>O Mapa da Felicidade</h3><p><em>Ashirei</em> não significa “feliz”. Significa “portador de luz”. A primeira virada da subida.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 03 · 700 m</span><span class="waypoint__num">03</span><h3>Sal e Luz</h3><p>Descobrir o próprio valor — e a responsabilidade que vem com ele.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 04 · 1.000 m</span><span class="waypoint__num">04</span><h3>A Lei e o Cumprimento</h3><p>A ética que não envelhece: o que sustenta quem sobe quando o caminho aperta.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 05 · 1.350 m</span><span class="waypoint__num">05</span><h3>O Pai Nosso</h3><p>A oração mais conhecida do mundo, reencontrada palavra por palavra.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 06 · 1.700 m</span><span class="waypoint__num">06</span><h3>Tesouros no Alto</h3><p>Soltar o peso que não sobe junto: ansiedade, posse, o que não importa.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 07 · 2.050 m</span><span class="waypoint__num">07</span><h3>Não Julgar</h3><p>O ar rarefeito das relações: empatia em vez de julgamento.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 08 · 2.400 m</span><span class="waypoint__num">08</span><h3>A Porta Estreita</h3><p>A passagem que separa quem desiste de quem chega. Discernimento e coragem.</p></article>
+        <article class="waypoint"><span class="waypoint__alt">Marco 09 · 2.700 m</span><span class="waypoint__num">09</span><h3>Sobre a Rocha</h3><p>O cume: fundar a vida sobre o que não desmorona. A vista que poucos alcançam.</p></article>
+      </div>
+    </div>
+
+    <div class="trail__cue" aria-hidden="true">continue subindo ↓</div>
+  </div>
+</section>
+
+<!-- ░░░ OS GUIAS ░░░ -->
+<section class="section guides">
+  <div class="wrap">
+    <header class="sec-head rise">
+      <p class="eyebrow">A expedição</p>
+      <h2>Nenhuma montanha séria se sobe sem um guia.</h2>
+      <p class="lead">Sete pesquisadores e educadores espirituais conduzem essa ascensão — não para debater religião, mas para iluminar cada passo do caminho.</p>
+    </header>
+    <div class="guide-feature rise">
+      <img src="assets/severino.jpg" alt="Severino Celestino, pesquisador das Escrituras" class="guide-feature__photo" loading="lazy" />
+      <div class="guide-feature__text">
+        <h3>Severino Celestino</h3>
+        <p>Autor de <em>Analisando as Traduções Bíblicas</em>. É ele quem reabre o texto original — o hebraico, o aramaico — e devolve ao ensinamento a força que ele tinha no alto daquele monte. É de Severino a revelação sobre <em>Ashirei</em> que reorienta toda a subida.</p>
+      </div>
+    </div>
+    <ul class="guide-list rise">
+      <li>Marcio Mussel</li><li>Marcio da Rós</li><li>Emerson Queiroz</li>
+      <li>Hiran Medeiros</li><li>Darley Queiroz</li><li>Monteiro</li>
     </ul>
   </div>
 </section>
 
-<!-- ============ 4. AGITAÇÃO → SOLUÇÃO ============ -->
-<section class="bridge" aria-label="Ponte narrativa" style="background: var(--azul-profundo);">
-  <div class="container narrow">
-    <p>Se você se identificou com algum desses momentos, provavelmente não é falta de fé.</p>
-    <p class="lead">É falta de <em>contexto</em>.</p>
-    <p>O Sermão da Montanha foi proferido em aramaico, num monte à beira do Mar da Galileia, por um rabino judeu que conhecia profundamente a Torá e o hebraico. Quando ele disse "Bem-aventurados os pobres de espírito", usou uma expressão que, no original, tem um significado completamente diferente do que qualquer tradução moderna é capaz de transmitir.</p>
-    <p>Esse documentário existe para preencher exatamente essa lacuna.</p>
-    <hr class="divider" />
-    <a href="#capitulos" class="btn btn-secondary">Ver o que está incluso</a>
-  </div>
-</section>
-
-<!-- ============ 5. APRESENTAÇÃO ============ -->
-<section class="presentation" aria-labelledby="presentation-title">
-  <div class="container">
-    <div class="section-head narrow">
-      <span class="eyebrow">O Documentário</span>
-      <h2 id="presentation-title">O que é o Sermão da Montanha: O Despertar do Espírito?</h2>
-    </div>
-    <div class="narrow" style="text-align: center;">
-      <p>É um documentário em 9 capítulos que percorre, verso por verso, o ensinamento mais completo que Jesus deixou registrado — do contexto geográfico e histórico até a aplicação espiritual profunda de cada palavra.</p>
-      <p>Não é um curso. Não é uma pregação. É uma experiência de estudo com sete palestrantes que dedicaram anos a compreender o texto original: sua etimologia hebraica, seu contexto arqueológico, sua ressonância com a Torá e seu impacto na espiritualidade universal.</p>
-      <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(20px, 2.5vw, 26px); color: var(--ouro-suave); margin-top: var(--space-xl);">Ao final dos 9 capítulos, você não vai apenas conhecer o Sermão da Montanha.<br/>Você vai entendê-lo.</p>
-    </div>
-
-    <div class="feature-grid">
-      <article class="feature">
-        <svg class="feature-icon" viewBox="0 0 48 48" stroke-width="1.5" aria-hidden="true">
-          <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="24" cy="18" r="5"/>
-        </svg>
-        <h3>Localização histórica real</h3>
-        <p>Cada capítulo começa com o contexto geográfico — o Monte das Beatitudes, o Mar da Galileia, Jerusalém. O texto ganhe corpo quando você sabe onde ele aconteceu.</p>
-      </article>
-      <article class="feature">
-        <svg class="feature-icon" viewBox="0 0 48 48" stroke-width="1.5" aria-hidden="true">
-          <path d="M8 10h14a4 4 0 014 4v26a3 3 0 00-3-3H8V10z" stroke-linejoin="round"/>
-          <path d="M40 10H26a4 4 0 00-4 4v26a3 3 0 013-3h15V10z" stroke-linejoin="round"/>
-        </svg>
-        <h3>Idioma original e etimologia</h3>
-        <p>Os palestrantes mergulham no hebraico e no aramaico para revelar o que se perde em qualquer tradução — incluindo o significado real de <em>Ashirei</em>, a palavra que abre as Bem-aventuranças.</p>
-      </article>
-      <article class="feature">
-        <svg class="feature-icon" viewBox="0 0 48 48" stroke-width="1.5" aria-hidden="true">
-          <circle cx="24" cy="24" r="18"/>
-          <circle cx="24" cy="24" r="11"/>
-          <circle cx="24" cy="24" r="4" fill="currentColor"/>
-        </svg>
-        <h3>Aplicação espiritual concreta</h3>
-        <p>Cada episódio conecta o ensinamento de Jesus a temas vivos: ansiedade, relações, julgamento, propósito. Não é arqueologia pela arqueologia — é compreensão a serviço da vida.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6. CAPÍTULOS ============ -->
-<section class="episodes" id="capitulos" aria-labelledby="episodes-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Conteúdo Completo</span>
-      <h2 id="episodes-title">Os 9 capítulos do documentário</h2>
-      <div class="narrow"><p>Cada episódio pode ser assistido no seu ritmo, na ordem que fizer sentido para você. O acesso é vitalício.</p></div>
-    </div>
-
-    <div class="episode-list">
-      <details class="episode" open>
-        <summary>
-          <span class="episode-num">01</span>
-          <span class="episode-title">As Raízes da História</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>O contexto que tudo muda: quem era Jesus como rabino, onde fica o Monte das Beatitudes, e por que o Sermão da Montanha é considerado o ensinamento mais completo da tradição cristã. <em>(Mateus 5–7)</em></p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">02</span>
-          <span class="episode-title">O Mapa da Felicidade</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>A palavra <em>Ashirei</em> em hebraico não significa "feliz" — significa "portador de luz". Esse capítulo redefine o que Jesus chamou de felicidade e por que essa distinção muda tudo.</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">03</span>
-          <span class="episode-title">Sal da Terra e Luz do Mundo</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>O que significa ser sal e luz? Esse capítulo explora o valor próprio, a responsabilidade espiritual e a permanência dos ensinamentos ao longo dos séculos.</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">04</span>
-          <span class="episode-title">As Leis e o Cumprimento</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>Jesus como sucessor de Moisés. A relação entre o Sermão da Montanha e as <em>Acer Devarim</em> (as Dez Palavras da Torá). A ética atemporal de esmola, jejum e oração.</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">05</span>
-          <span class="episode-title">A Oração do Pai Nosso</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>Verso por verso, palavra por palavra. A oração mais conhecida do mundo revisitada em profundidade — o que cada pedido significa no contexto original.</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">06</span>
-          <span class="episode-title">Tesouros nos Céus / O Reino de Deus</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>Ansiedade, materialismo e a pergunta que Jesus faz diretamente: onde está o seu coração? Um dos capítulos mais aplicáveis à vida contemporânea.</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">07</span>
-          <span class="episode-title">Julgar os Outros / Pedir e Receber</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>Relações humanas à luz do ensinamento de Jesus: empatia, não julgamento, e a promessa de que quem pede recebe — em que sentido?</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">08</span>
-          <span class="episode-title">A Porta Estreita / Os Falsos Profetas</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>O que Jesus quis dizer com "estreita é a porta"? Esse capítulo aborda escolhas corajosas, discernimento espiritual e como reconhecer o que é genuíno.</p></div>
-      </details>
-
-      <details class="episode">
-        <summary>
-          <span class="episode-num">09</span>
-          <span class="episode-title">Edificar Sobre a Rocha</span>
-          <svg class="episode-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
-        </summary>
-        <div class="episode-body"><p>O capítulo final: fundamentos sólidos, autoridade de Jesus e a conclusão de um ensinamento que atravessou 2.000 anos intacto.</p></div>
-      </details>
-    </div>
-
-    <div style="text-align: center; margin-top: var(--space-2xl);">
-      <a href="#oferta" class="btn btn-primary">Quero acessar os 9 capítulos</a>
-      <p class="hero-meta">Acesso vitalício · Assista quando e quantas vezes quiser</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7. AUTORIDADE ============ -->
-<section class="authority" aria-labelledby="authority-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Autoridade</span>
-      <h2 id="authority-title">Quem guia você nessa jornada</h2>
-      <div class="narrow"><p>Sete pesquisadores, estudiosos e educadores espirituais que dedicaram anos ao estudo profundo das Escrituras — não para debater religião, mas para iluminar o ensinamento.</p></div>
-    </div>
-
-    <article class="speaker-main" aria-labelledby="speaker-name">
-      <div class="speaker-portrait">
-    <img src="assets/severino.jpg" alt="Severino Celestino, pesquisador bíblico e palestrante principal do documentário" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
-  </div>
-      <div>
-        <h3 id="speaker-name">Severino Celestino</h3>
-        <p>Pesquisador bíblico e autor de <em>Analisando as Traduções Bíblicas</em> — referência para quem estuda o texto original das Escrituras. Severino traz a perspectiva do hebraico e do aramaico para revelar o que as traduções modernas não conseguem transmitir. É ele quem desvenda o significado real de <em>Ashirei</em>, a palavra-chave das Bem-aventuranças.</p>
-      </div>
-    </article>
-
-    <div class="speakers-grid">
-      <hr class="divider" />
-      <div class="speakers-names">
-        <span>Marcio Mussel</span>
-        <span>Marcio da Rós</span>
-        <span>Emerson Queiroz</span>
-        <span>Hiran Medeiros</span>
-        <span>Darley Queiroz</span>
-        <span>Monteiro</span>
-      </div>
-      <p>Juntos, formam um grupo plural e complementar — cada um traz uma perspectiva diferente sobre o mesmo texto, criando uma experiência de estudo rica e multidimensional.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8. TRANSFORMAÇÕES ============ -->
-<section class="benefits" style="background: var(--azul-profundo);" aria-labelledby="benefits-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Aprendizado</span>
-      <h2 id="benefits-title">Ao final dos 9 capítulos, você vai saber:</h2>
-    </div>
-    <ul class="benefits-list">
-      <li><span>Por que a palavra <em>Ashirei</em> muda completamente o significado das Bem-aventuranças — e o que isso diz sobre o que Jesus entendia por felicidade</span></li>
-      <li><span>A relação direta entre o Sermão da Montanha e a tradição judaica da Torá — e por que isso importa para quem quer entender Jesus de verdade</span></li>
-      <li><span>O que o contexto geográfico do Monte das Beatitudes revela sobre a intenção do ensinamento</span></li>
-      <li><span>Como a Oração do Pai Nosso foi construída verso por verso — e o que cada pedido significa no original</span></li>
-      <li><span>Por que "a porta estreita" é um convite, não uma ameaça — e como isso muda a forma de viver escolhas difíceis</span></li>
-      <li><span>O que Jesus quis dizer com "edificar sobre a rocha" — e como isso se aplica a decisões concretas da vida espiritual e cotidiana</span></li>
-      <li><span>Como desenvolver discernimento para distinguir o que é genuíno do que é superficial na espiritualidade</span></li>
+<!-- ░░░ A VISTA DO ALTO (transformações) ░░░ -->
+<section class="vista" style="--bg:url('../images/web/humano.jpg')">
+  <div class="vista__scrim"></div>
+  <div class="mist"></div>
+  <div class="wrap vista__inner">
+    <header class="rise">
+      <p class="eyebrow">O cume · 2.700 m</p>
+      <h2>Do alto, tudo se enxerga diferente.</h2>
+      <p class="vista__sub">O que muda em quem chega ao topo:</p>
+    </header>
+    <ul class="vista__list rise">
+      <li>Uma felicidade que não depende do que se tem — e sim do que se é</li>
+      <li>Serenidade diante da ansiedade e do peso dos dias</li>
+      <li>O Pai Nosso reencontrado como experiência viva</li>
+      <li>Leveza para soltar julgamentos — dos outros e de si</li>
+      <li>Coragem e clareza nas escolhas difíceis</li>
+      <li>Um alicerce interior que não desmorona quando a vida aperta</li>
+      <li>Uma fé sua: livre de culpa, de dogma e de intermediários</li>
     </ul>
   </div>
 </section>
 
-<!-- ============ 9. DEPOIMENTOS ============ -->
-<section class="testimonials" aria-labelledby="testimonials-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Depoimentos</span>
-      <h2 id="testimonials-title">O que dizem quem já assistiu</h2>
-      <div class="narrow"><p>Depoimentos reais de pessoas que tiveram acesso ao documentário.</p></div>
-    </div>
-
-    <div class="carousel">
-      <div class="carousel-track" id="carousel-track" tabindex="0" aria-label="Carrossel de depoimentos" role="region">
-        <article class="testimonial">
-          <p class="testimonial-text">Sou espírita há mais de vinte anos e achei que conhecia bem o Sermão da Montanha. Quando o Severino Celestino explicou o que significa a palavra Ashirei no segundo capítulo, precisei pausar o vídeo. Não porque era complicado — porque era simples demais, e eu nunca tinha enxergado assim.</p>
-          <p class="testimonial-name">Renata Oliveira</p>
-          <p class="testimonial-city">São Paulo, SP</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">Sou católico praticante e estava um pouco cético no começo. Mas o capítulo do Pai Nosso me desarmou completamente. Palavra por palavra, com o contexto original do aramaico. Rezei essa oração a vida toda — e só aqui entendi o que estava dizendo.</p>
-          <p class="testimonial-name">Carlos Henrique Braga</p>
-          <p class="testimonial-city">Belo Horizonte, MG</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">Não me encaixo em nenhuma religião específica, mas tenho uma busca espiritual muito séria. Esse documentário é o mais honesto que já vi sobre Jesus — sem proselitismo, sem dogma. Só a profundidade do ensinamento. Assisti os 9 capítulos em dois dias.</p>
-          <p class="testimonial-name">Fernanda Luz</p>
-          <p class="testimonial-city">Rio de Janeiro, RJ</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">O que me surpreendeu foi o rigor histórico. Saber que Jesus proferiu esse discurso em um monte específico, para um povo específico, dentro de uma tradição religiosa específica — isso não diminui o ensinamento. Pelo contrário, faz ele ser ainda mais impressionante.</p>
-          <p class="testimonial-name">Rodrigo Mendes</p>
-          <p class="testimonial-city">Porto Alegre, RS</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">Assisti com minha mãe, que tem 71 anos e é católica a vida toda. No capítulo das Bem-aventuranças ela disse: 'nunca ninguém me explicou isso desse jeito'. Isso diz tudo sobre o que esse documentário faz.</p>
-          <p class="testimonial-name">Simone Andrade</p>
-          <p class="testimonial-city">Salvador, BA</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">O Severino é um presente. A forma como ele usa o hebraico para abrir o texto — sem ser acadêmico chato, sem ser pregador — é raro. Comprei por R$129 e o conteúdo vale dez vezes mais do que isso em termos de profundidade.</p>
-          <p class="testimonial-name">Thiago Fonseca</p>
-          <p class="testimonial-city">Curitiba, PR</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">O capítulo sobre julgamento mudou algo em mim que palavras não descrevem direito. Eu vivia com muito peso de julgamentos — de mim e dos outros. Esse ensinamento, apresentado desse jeito, chegou onde precisava chegar.</p>
-          <p class="testimonial-name">Luciana Campos</p>
-          <p class="testimonial-city">Fortaleza, CE</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">Sou agnóstico. Comprei sem muita expectativa, por indicação de um amigo. Me surpreendi com a seriedade acadêmica e com o respeito que os palestrantes têm pela inteligência de quem assiste. Não precisei 'crer em nada' para tirar muito valor daqui.</p>
-          <p class="testimonial-name">André Peixoto</p>
-          <p class="testimonial-city">São Paulo, SP</p>
-        </article>
-        <article class="testimonial">
-          <p class="testimonial-text">O último capítulo, sobre edificar sobre a rocha, foi o que mais ficou. Estou num momento de reconstrução na minha vida e aquela frase — 'a chuva caiu, e não caiu a casa, porque estava fundada sobre a rocha' — ganhou um peso diferente depois do documentário. Recomendo sem hesitar.</p>
-          <p class="testimonial-name">Patrícia Duarte</p>
-          <p class="testimonial-city">Goiânia, GO</p>
-        </article>
-      </div>
-      <div class="carousel-controls">
-        <button type="button" class="carousel-btn" id="prev-btn" aria-label="Depoimento anterior">
-          <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button type="button" class="carousel-btn" id="next-btn" aria-label="Próximo depoimento">
-          <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: var(--space-2xl);">
-      <a href="#oferta" class="btn btn-secondary">Quero ter essa experiência também</a>
+<!-- ░░░ VOZES DA TRILHA ░░░ -->
+<section class="section voices">
+  <div class="wrap">
+    <header class="sec-head rise">
+      <p class="eyebrow">Quem já fez a subida</p>
+      <h2>Eles chegaram ao topo. Contam como foi.</h2>
+    </header>
+  </div>
+  <div class="t-track" id="tTrack" aria-label="Depoimentos de quem assistiu">
+    <div class="t-row" id="tRow">
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Sou espírita há mais de vinte anos e achei que conhecia bem o Sermão da Montanha. Quando o Severino explicou o que é <em>Ashirei</em>, precisei parar. Nunca tinha enxergado assim.”</p><footer>Renata Oliveira <span>· São Paulo, SP</span></footer></blockquote>
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Sou católico praticante. O capítulo do Pai Nosso me desarmou. Rezei essa oração a vida toda — e só aqui entendi o que estava dizendo.”</p><footer>Carlos Henrique Braga <span>· Belo Horizonte, MG</span></footer></blockquote>
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Não me encaixo em nenhuma religião, mas tenho uma busca séria. O documentário mais honesto que já vi sobre Jesus — sem dogma, só profundidade.”</p><footer>Fernanda Luz <span>· Rio de Janeiro, RJ</span></footer></blockquote>
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Assisti com minha mãe, 71 anos, católica a vida toda. Nas Bem-aventuranças ela disse: ‘nunca ninguém me explicou assim’. Diz tudo.”</p><footer>Simone Andrade <span>· Salvador, BA</span></footer></blockquote>
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“O capítulo sobre julgamento mudou algo em mim que não sei descrever. Chegou onde precisava chegar.”</p><footer>Luciana Campos <span>· Fortaleza, CE</span></footer></blockquote>
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“Sou agnóstico. Comprei sem expectativa. Me surpreendi com a seriedade e o respeito pela inteligência de quem assiste. Não precisei ‘crer em nada’ para tirar muito valor.”</p><footer>André Peixoto <span>· São Paulo, SP</span></footer></blockquote>
+      <blockquote class="t-card"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><p>“O último marco, sobre edificar sobre a rocha, foi o que mais ficou. Estou num momento de reconstrução e aquela imagem ganhou outro peso.”</p><footer>Patrícia Duarte <span>· Goiânia, GO</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<!-- ============ 9B. LIVRO FÍSICO ============ -->
-<section class="book-section" id="livro" aria-labelledby="book-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Também disponível</span>
-      <h2 id="book-title">O estudo em suas mãos — literalmente.</h2>
-    </div>
-    <div class="book-grid">
-      <div class="book-img-wrap">
-        <img src="assets/livro-mockup.png" alt="Livro físico Sermão da Montanha: O Despertar do Espírito, organizado por Thiago Rosa, capa branca com ilustração em dourado" loading="lazy" />
-      </div>
-      <div class="book-body">
-        <p>Para quem prefere o peso do livro nas mãos, a margem para anotações e a página que marca o lugar — o conteúdo do documentário existe também em versão impressa.</p>
-        <p><strong>Sermão da Montanha: O Despertar do Espírito</strong> é a versão condensada do estudo em formato de livro físico. O mesmo rigor, a mesma profundidade — em um objeto que fica na estante e pode ser relido quando quiser.</p>
-        <p>Organizado por <em>Thiago Rosa</em>, o livro está disponível na Amazon e pode ser enviado para qualquer endereço no Brasil e no exterior.</p>
-        <ul class="book-feat">
-          <li>Texto baseado nas palestras dos 7 especialistas do documentário</li>
-          <li>Inclui análise etimológica de <em>Ashirei</em> e outros termos originais</li>
-          <li>Ideal para estudo pessoal, grupos de leitura ou como presente</li>
-          <li>Disponível para envio imediato via Amazon</li>
+<!-- ░░░ BEAT CINEMATOGRÁFICO ░░░ -->
+<section class="beat" style="--bg:url('../images/web/cume.jpg')">
+  <div class="beat__bg"></div>
+  <blockquote class="beat__quote">
+    <span class="beat__part beat__part--1">Quanto mais alto,</span>
+    <span class="beat__part beat__part--2"><em>mais leve.</em></span>
+  </blockquote>
+</section>
+
+<!-- ░░░ A CAUSA ░░░ -->
+<section class="cause" style="--bg:url('../images/web/causa.jpg')">
+  <div class="cause__scrim"></div>
+  <div class="mist"></div>
+  <div class="wrap wrap--narrow cause__inner rise">
+    <p class="eyebrow">Além do topo</p>
+    <h2>A sua subida acende uma luz para quem ainda está na base.</h2>
+    <p class="lead">Este é o primeiro projeto digital do <strong>Núcleo Gaspar</strong>. Toda a receita sustenta suas obras beneficentes — mais de 1.000 pessoas já fizeram parte disso.</p>
+    <p class="cause__close">Ao subir, você abre a trilha para outros.</p>
+  </div>
+</section>
+
+<!-- ░░░ O MAPA (oferta) ░░░ -->
+<section class="section offer" id="oferta">
+  <div class="wrap">
+    <header class="sec-head rise">
+      <img class="offer-card__mark" src="images/web/icon.png" alt="Emblema do documentário Sermão da Montanha" />
+      <p class="eyebrow">Sua expedição começa aqui</p>
+      <h2>Escolha como fazer a sua subida.</h2>
+      <p class="lead">Três formas de percorrer a trilha do <strong>Sermão da Montanha — O Despertar do Espírito</strong>. No seu ritmo, do seu jeito.</p>
+    </header>
+
+    <div class="plans rise">
+      <!-- O LIVRO -->
+      <article class="plan">
+        <figure class="plan__media"><img src="images/web/livro.png" alt="Livro físico Sermão da Montanha — O Despertar do Espírito" loading="lazy" /></figure>
+        <p class="plan__tag">O Livro</p>
+        <h3 class="plan__name">A trilha em<br />suas mãos</h3>
+        <p class="plan__desc">O livro do documentário — para levar a montanha com você a qualquer lugar.</p>
+        <div class="plan__price"><span class="plan__value">R$ 39,90</span><span class="plan__note">+ frete</span></div>
+        <a href="#" target="_blank" rel="noopener" class="btn btn--block btn--ghost" data-cursor="grow">Quero o livro</a>
+      </article>
+
+      <!-- A EXPEDIÇÃO COMPLETA (combo) -->
+      <article class="plan plan--featured">
+        <span class="plan__badge">Melhor escolha</span>
+        <figure class="plan__media"><img src="images/web/livro.png" alt="Documentário e livro Sermão da Montanha" loading="lazy" /></figure>
+        <p class="plan__tag">A Expedição Completa</p>
+        <h3 class="plan__name">Documentário<br />+ Livro</h3>
+        <p class="plan__desc">A subida inteira: os 9 marcos em vídeo e o livro na sua estante.</p>
+        <ul class="plan__feats">
+          <li>Documentário digital vitalício</li>
+          <li>Livro físico do documentário</li>
+          <li>Frete grátis</li>
         </ul>
-        <a href="https://www.amazon.com.br" class="btn btn-secondary" target="_blank" rel="noopener" aria-label="Comprar o livro físico na Amazon">Quero o livro físico</a>
-        <p class="book-price-note">Vendido separadamente · Enviado pela Amazon</p>
-      </div>
+        <div class="plan__price"><span class="plan__from">de R$ 169,80 por</span><span class="plan__value">R$ 149,90</span><span class="plan__note">com frete grátis</span></div>
+        <a href="#" target="_blank" rel="noopener" class="btn btn--block" data-cursor="grow">Quero a expedição completa</a>
+      </article>
+
+      <!-- O DOCUMENTÁRIO -->
+      <article class="plan">
+        <figure class="plan__media plan__media--pending"><span>Mockup da tela<br />em breve</span></figure>
+        <p class="plan__tag">O Documentário</p>
+        <h3 class="plan__name">A subida<br />guiada</h3>
+        <p class="plan__desc">9 capítulos, 9 marcos. Acesso digital vitalício, no seu ritmo.</p>
+        <div class="plan__price"><span class="plan__value">R$ 129,90</span><span class="plan__note">acesso vitalício</span></div>
+        <a href="https://chk.eduzz.com/1049830" target="_blank" rel="noopener" class="btn btn--block btn--ghost" data-cursor="grow">Quero o documentário</a>
+      </article>
+    </div>
+
+    <p class="plans__foot">🔒 Pagamento seguro · Eduzz · 7 dias de garantia · Cada compra sustenta as obras do Núcleo Gaspar</p>
+  </div>
+</section>
+
+<!-- ░░░ GARANTIA ░░░ -->
+<section class="section guarantee">
+  <div class="wrap wrap--narrow center rise">
+    <p class="eyebrow">Suba sem risco</p>
+    <h2>Se a vista não valer a subida, devolvemos cada passo.</h2>
+    <p class="lead">7 dias de garantia incondicional. Se você sentir que não valeu, devolvemos 100% — sem perguntas.</p>
+    <ul class="seals">
+      <li><b>7 dias</b><span>garantia incondicional</span></li>
+      <li><b>100%</b><span>pagamento seguro</span></li>
+      <li><b>∞</b><span>acesso vitalício</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ░░░ ANTES DE PARTIR (FAQ) ░░░ -->
+<section class="section faq">
+  <div class="wrap wrap--narrow">
+    <header class="sec-head rise"><p class="eyebrow">Preparando a mochila</p><h2>Antes de partir.</h2></header>
+    <div class="accordion rise">
+      <details><summary>Para quem é esse documentário?</summary><p>Para qualquer pessoa que queira percorrer o Sermão da Montanha em profundidade — independente de tradição religiosa. Católicos, evangélicos, espíritas e buscadores independentes encontram valor aqui.</p></details>
+      <details><summary>Preciso de conhecimento prévio?</summary><p>Não. Os guias constroem o contexto do zero — quem foi Jesus como mestre, o que significa cada termo no original. Você não precisa saber nada antes de começar.</p></details>
+      <details><summary>Qual é o formato? É ao vivo?</summary><p>São 9 capítulos gravados, disponíveis imediatamente após a compra. Você assiste no seu ritmo, na ordem que preferir.</p></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><p>Vitalício. Uma vez adquirido, o acesso é seu para sempre — sem mensalidade, sem renovação.</p></details>
+      <details><summary>Como assisto?</summary><p>Pela plataforma Eduzz, no navegador ou app. Funciona em computador, celular e tablet.</p></details>
+      <details><summary>Quais as formas de pagamento?</summary><p>Cartão de crédito (parcelado), PIX e boleto. Processado pela Eduzz.</p></details>
+      <details><summary>Para onde vai o dinheiro?</summary><p>100% da receita é destinada às obras beneficentes do Núcleo Gaspar.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ============ 10. A CAUSA ============ -->
-<section class="cause" aria-labelledby="cause-title">
-  <div class="container narrow">
-    <svg class="cause-icon" viewBox="0 0 80 80" stroke-width="1.2" aria-hidden="true">
-      <path d="M40 12 L48 30 L68 32 L52 46 L56 66 L40 56 L24 66 L28 46 L12 32 L32 30 Z" stroke-linejoin="round" stroke-linecap="round"/>
-    </svg>
-    <span class="eyebrow">A Causa</span>
-    <h2 id="cause-title">Sua compra faz algo no mundo — não apenas em você.</h2>
-    <div class="cause-body">
-      <p>O <em>Sermão da Montanha: O Despertar do Espírito</em> é o primeiro projeto digital do <strong>Núcleo Gaspar</strong>.</p>
-      <p>Em mais de três anos de existência, mais de 2.000 pessoas compraram acesso a esse documentário. Cada uma dessas compras financiou diretamente as obras beneficentes conduzidas pelo Núcleo.</p>
-      <p>Isso não é um detalhe de rodapé. É o motivo pelo qual esse projeto existe.</p>
-      <p>O ensinamento no capítulo 6 fala sobre tesouros que não enferrujam — sobre onde vale a pena investir energia e recursos. Construir esse documentário e colocá-lo disponível para o mundo foi, em si, uma tentativa de viver esse ensinamento.</p>
-      <p>Ao comprar, você não está apenas acessando conteúdo. Você está sustentando uma causa real — e fazendo parte da história do primeiro projeto digital que o Núcleo Gaspar trouxe para o mundo.</p>
-    </div>
+<!-- ░░░ O TOPO (CTA final) ░░░ -->
+<section class="final" id="topo" style="--bg:url('../images/web/cume.jpg')">
+  <video class="final__video" muted loop playsinline preload="none" poster="images/web/cume.jpg" aria-hidden="true"><source data-src="images/web/topo.mp4" type="video/mp4" /></video>
+  <div class="final__scrim"></div>
+  <div class="mist"></div>
+  <div class="wrap wrap--narrow final__inner rise">
+    <img class="final__mark" src="images/web/icon.png" alt="Emblema do documentário" />
+    <p class="eyebrow">O topo espera por você</p>
+    <h2 class="final__brand">Sermão da Montanha<span>O Despertar do Espírito</span></h2>
+    <p class="final__text">Não como obrigação. Como um reencontro com algo que sempre esteve aí dentro.</p>
+    <a href="#oferta" class="btn btn--lg" data-cursor="grow">Começar a jornada <span>↓</span></a>
+    <p class="final__micro">🔒 Compra segura · 7 dias de garantia · Sustenta as obras do Núcleo Gaspar</p>
   </div>
 </section>
 
-<!-- ============ 11. OFERTA ============ -->
-<section class="offer" id="oferta" aria-labelledby="offer-title">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Oferta</span>
-      <h2 id="offer-title">Tudo isso por acesso vitalício</h2>
-    </div>
-
-    <article class="offer-card" aria-labelledby="offer-card-title">
-      <h3 id="offer-card-title">Sermão da Montanha: O Despertar do Espírito</h3>
-      <p><strong>9 capítulos completos</strong><br/>Assista no seu ritmo, quantas vezes quiser, para sempre.</p>
-      <hr class="divider" />
-      <ul class="offer-feat">
-        <li>Acesso imediato após a compra</li>
-        <li>9 capítulos · ~45 minutos de conteúdo aprofundado</li>
-        <li>Recurso de aprendizado permanente — não é um curso que expira</li>
-        <li>Disponível em qualquer dispositivo</li>
-        <li>Contribuição direta para obras beneficentes</li>
-      </ul>
-      <hr class="divider" />
-      <span class="price-old" aria-label="Preço anterior">R$ 197</span>
-      <div class="price-now">R$ 129</div>
-      <p class="price-meta">Pagamento único · Acesso vitalício</p>
-      <a href="#" class="btn btn-primary" aria-label="Quero meu acesso agora">Quero meu acesso agora</a>
-      <p class="offer-secure">Pagamento seguro · Processado pela Eduzz</p>
-    </article>
-  </div>
-</section>
-
-<!-- ============ 12. GARANTIA ============ -->
-<section class="guarantee" aria-labelledby="guarantee-title">
-  <div class="container narrow">
-    <div class="section-head">
-      <span class="eyebrow">Garantia</span>
-      <h2 id="guarantee-title">Você não tem nada a perder. Literalmente.</h2>
-    </div>
-    <p>Se em 7 dias você sentir que o documentário não correspondeu ao que foi prometido aqui, devolvemos 100% do seu valor — sem perguntas, sem burocracia.</p>
-    <p>Não precisamos que você goste por obrigação. Precisamos que você goste porque valeu.</p>
-    <p>E se não valeu? Estamos errados — e você recebe seu dinheiro de volta.</p>
-
-    <div class="seals" role="list">
-      <div class="seal" role="listitem"><span class="seal-icon" aria-hidden="true">🔒</span> Garantia incondicional de 7 dias</div>
-      <div class="seal" role="listitem"><span class="seal-icon" aria-hidden="true">💳</span> Pagamento 100% seguro</div>
-      <div class="seal" role="listitem"><span class="seal-icon" aria-hidden="true">♾️</span> Acesso vitalício garantido</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 13. INDECISÃO ============ -->
-<section class="indecision" aria-labelledby="indecision-title">
-  <div class="container narrow">
-    <div class="section-head">
-      <h2 id="indecision-title">Ainda não tem certeza?</h2>
-    </div>
-    <p>Tudo bem. Decisões espirituais não precisam ser tomadas às pressas.</p>
-    <p>O que podemos dizer é: este documentário existe há 3 anos, mais de 2.000 pessoas já assistiram, e ele continua disponível porque continua fazendo sentido.</p>
-    <p>Se você chegou até aqui nessa página, provavelmente tem uma razão. Pode ser esse o momento certo — ou pode ser que você precise de mais tempo.</p>
-    <p>Quando estiver pronto, o acesso estará aqui.</p>
-    <div style="margin-top: var(--space-2xl);">
-      <a href="#oferta" class="btn btn-secondary">Quero acessar quando estiver pronto</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 14. FAQ ============ -->
-<section class="faq" aria-labelledby="faq-title">
-  <div class="container narrow">
-    <div class="section-head">
-      <span class="eyebrow">Dúvidas</span>
-      <h2 id="faq-title">Perguntas frequentes</h2>
-    </div>
-
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Para quem é esse documentário?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Para qualquer pessoa que quer entender o Sermão da Montanha em profundidade — independente de denominação religiosa ou tradição espiritual. O conteúdo é construído com rigor acadêmico e abertura universal. Católicos, evangélicos, espíritas e buscadores independentes encontram valor aqui.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Preciso ter conhecimento prévio de Bíblia?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Não. Os palestrantes constroem o contexto do zero — incluindo o que é o Monte das Beatitudes, quem era Jesus como rabino judeu, e o que significa cada termo em hebraico. Você não precisa saber nada antes de começar.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Qual é o formato? É ao vivo?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Não é ao vivo. São 9 episódios gravados, disponíveis imediatamente após a compra. Você assiste no seu próprio ritmo, na ordem que preferir.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Por quanto tempo terei acesso?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Vitalício. Uma vez comprado, o acesso é seu para sempre — sem mensalidade, sem renovação, sem prazo.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Como vou assistir?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Pela plataforma Eduzz, no navegador ou aplicativo. Funciona em computador, celular e tablet.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Recebo acesso imediatamente?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Sim. Logo após a confirmação do pagamento, você recebe as instruções de acesso por e-mail.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Quais são as formas de pagamento?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Cartão de crédito (parcelado), PIX e boleto bancário. O processamento é feito pela plataforma Eduzz.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Existe garantia?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Sim — 7 dias incondicional. Se por qualquer motivo você não ficar satisfeito, basta solicitar o reembolso dentro desse prazo e devolvemos 100% do valor.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Para onde vai o dinheiro da minha compra?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">100% da receita é destinada às obras beneficentes do Núcleo Gaspar. Sua compra financia diretamente projetos de impacto social.</div>
-      </details>
-      <details class="faq-item">
-        <summary>Tenho alguma dúvida que não está aqui — como falo com vocês?<svg class="faq-toggle" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></summary>
-        <div class="faq-answer">Entre em contato pelo WhatsApp [INSERIR NÚMERO]. Nosso time responde em horário comercial.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 15. SUPORTE ============ -->
-<section class="support" aria-labelledby="support-title">
-  <div class="container narrow">
-    <div class="section-head">
-      <span class="eyebrow">Suporte</span>
-      <h2 id="support-title">Alguma dúvida antes de decidir?</h2>
-    </div>
-    <p>Nossa equipe está no WhatsApp para responder o que você precisar — sobre o conteúdo, sobre o acesso, sobre a causa por trás do projeto.</p>
-    <a href="#" class="btn btn-secondary" aria-label="Falar com a equipe no WhatsApp">Falar com a equipe no WhatsApp</a>
-    <p class="support-meta">[INSERIR NÚMERO]</p>
-  </div>
-</section>
-
-<!-- ============ 16. CTA FINAL ============ -->
-<section class="final-cta" aria-labelledby="final-title">
-  <div class="container narrow">
-    <h2 id="final-title">O ensinamento mais profundo de Jesus está esperando por você.</h2>
-    <div style="margin-top: var(--space-xl);">
-      <p>Não como um dever religioso. Não como uma obrigação.</p>
-      <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(22px, 3vw, 30px); color: var(--ouro-suave); margin: var(--space-lg) 0;">Como uma descoberta.</p>
-      <p>Quando você entender o que a palavra <em>Ashirei</em> realmente significa — e como ela conecta 2.000 anos de espiritualidade em uma única frase — algo vai mudar na forma como você enxerga tudo isso.</p>
-      <p>O acesso é vitalício. A causa é real. O conteúdo é sólido.</p>
-      <p style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--ouro-palido);">O momento pode ser esse.</p>
-    </div>
-    <div style="margin-top: var(--space-2xl);">
-      <a href="#oferta" class="btn btn-primary">Quero meu acesso ao documentário</a>
-      <p class="hero-meta">R$ 129 · Pagamento único · Acesso vitalício</p>
-      <p class="final-cta-meta">🔒 Compra 100% segura · Garantia de 7 dias · Contribuição às obras beneficentes</p>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer role="contentinfo">
-  <div class="container">
-    <p class="brand-foot">Sermão da Montanha: O Despertar do Espírito</p>
-    <p>Toda a receita é destinada às obras beneficentes do Núcleo Gaspar.</p>
-    <nav class="footer-links" aria-label="Links institucionais">
-      <a href="#">Termos de Uso</a>
-      <a href="#">Política de Privacidade</a>
-      <a href="#">Contato</a>
-    </nav>
-    <p class="copyright">© 2026 Núcleo Gaspar · Todos os direitos reservados</p>
-  </div>
+<footer class="site-footer">
+  <p class="site-footer__brand">Sermão da Montanha — O Despertar do Espírito</p>
+  <p>Toda a receita é destinada às obras beneficentes do Núcleo Gaspar.</p>
+  <p class="site-footer__copy">© 2026 Núcleo Gaspar</p>
 </footer>
 
-<script>
-(function() {
-  'use strict';
-
-  // Carrossel de depoimentos
-  var track = document.getElementById('carousel-track');
-  var prevBtn = document.getElementById('prev-btn');
-  var nextBtn = document.getElementById('next-btn');
-
-  function getStep() {
-    var first = track.querySelector('.testimonial');
-    if (!first) return 320;
-    var style = getComputedStyle(track);
-    var gap = parseInt(style.columnGap || style.gap || '24', 10);
-    return first.getBoundingClientRect().width + gap;
-  }
-
-  if (prevBtn && nextBtn && track) {
-    prevBtn.addEventListener('click', function() {
-      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
-    });
-    nextBtn.addEventListener('click', function() {
-      track.scrollBy({ left: getStep(), behavior: 'smooth' });
-    });
-    // Navegação por teclado dentro do track
-    track.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); track.scrollBy({ left: -getStep(), behavior: 'smooth' }); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); track.scrollBy({ left: getStep(), behavior: 'smooth' }); }
-    });
-  }
-
-  // Reveal on scroll (animação sutil)
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var revealEls = document.querySelectorAll('section .section-head, .feature, .episode, .testimonial, .speaker-main, .offer-card, .seal, .benefits-list li');
-    revealEls.forEach(function(el) { el.classList.add('reveal'); });
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    revealEls.forEach(function(el) { io.observe(el); });
-  }
-
-  // Smooth scroll com offset do header fixo (fallback se scroll-behavior não funcionar)
-  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      var href = link.getAttribute('href');
-      if (href === '#' || href.length < 2) return;
-      var target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      var headerH = document.querySelector('header[role="banner"]').offsetHeight;
-      var top = target.getBoundingClientRect().top + window.pageYOffset - headerH - 8;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    });
-  });
-})();
-</script>
-
+<!-- Bibliotecas: Lenis (smooth scroll) + GSAP + ScrollTrigger -->
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js?v=11"></script>
 </body>
 </html>

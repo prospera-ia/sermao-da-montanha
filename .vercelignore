@@ -1,0 +1,28 @@
+# ===== Fontes pesadas (não usadas no site publicado) =====
+images/*.png
+images/*.mp4
+images/_thumbs/
+images/_descartados/
+images/web/*-src.png
+
+# ===== Versões antigas / arquivos de trabalho =====
+_descartados/
+styles.css
+script.js
+docs/
+*.md
+*.pdf
+referência visual id.png
+.claude/
+
+# ===== Assets antigos da v2 (mantém apenas o que o site usa: assets/severino.jpg) =====
+assets/hero-desktop_FINAL.png
+assets/hero-mobile-clean-A.png
+assets/hero-mobile_FINAL.png
+assets/journey_still-water.png
+assets/guarantee_stone.png
+assets/transformation_hands-light.png
+assets/divider_mist-forest.png
+assets/livro-mockup.png
+assets/hero-loop_FINAL.mp4
+assets/hero.mp4

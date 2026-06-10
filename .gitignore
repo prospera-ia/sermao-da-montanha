@@ -1,3 +1,24 @@
+# ===== Sistema =====
+.DS_Store
+.claude/
+
+# ===== Fontes pesadas (não usadas no site — só images/web/ entra) =====
+images/*.png
+images/*.mp4
+images/_thumbs/
+images/_descartados/
+images/web/*-src.png
+
+# ===== Versões antigas / arquivos de trabalho =====
+_descartados/
+styles.css
+script.js
+docs/
+*.md
+*.pdf
 referência visual id.png
-LANDING PAGE — Copy Completo.md
 design-system-sermao-da-montanha.pdf
+
+# ===== Assets antigos da v2 (mantém apenas assets/severino.jpg) =====
+assets/*
+!assets/severino.jpg
